@@ -11,7 +11,7 @@
 			<div class="left-1 avatar col-md-4">
 				<div class="card-avt">
 					<span class="white-animate"></span>
-					<img class="avt-img" src="{% static 'about/images/avt.jpg' %}" alt="">
+					<img class="avt-img" src="{{ MEDIA_URL }}{{ item.images }}" alt="">
 					<div class="under-img">
 						<button type="button"><p>Contact for work</p></button>
 					</div>
