@@ -59,6 +59,7 @@
 .descrip{
 	padding: 1rem 2rem;
 	background: #eaeaea;
+	width: 100%;
 }
 
 .card-video:nth-child(even) img{
