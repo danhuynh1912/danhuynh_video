@@ -1,13 +1,13 @@
-body{
+/*body{
 	background: url('/static/video/images/back.png');
 	background-size: 100%;
 	background-attachment: fixed;
-}
+}*/
 
-.na4, .na5{
+/*.na4, .na5{
 	color: white !important;
 }
-
+*/
 .title-video{
 	height: 12rem;
 	display: flex;
