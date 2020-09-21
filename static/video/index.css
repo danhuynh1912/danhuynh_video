@@ -1,3 +1,13 @@
+body{
+	background: url('/static/video/images/back.png');
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.na4, .na5{
+	color: white !important;
+}
+
 .title-video{
 	height: 12rem;
 	display: flex;
@@ -19,7 +29,7 @@
 }
 
 .titlevideo{
-	color: teal;
+	color: #6b3878;
 }
 
 .card-video img{
@@ -42,7 +52,8 @@
 
 .card-video{
 	display: flex;
-	margin-bottom: 2rem
+	margin-bottom: 2rem;
+	box-shadow: -5px 5px 16px -3px #292929;
 }
 
 .descrip{
@@ -52,4 +63,36 @@
 
 .card-video:nth-child(even) img{
 	order: 2
+}
+
+.watchnow{
+    border: none;
+    color: white;
+    background: #6b3878;
+    height: 50px;
+    width: 130px;
+    border-radius: 25px;
+}
+
+.watchnow:hover{
+	background: #522b5d;
+}
+
+.modal-title{
+	color: #6b3878;
+}
+
+.modal-footer button{
+	border: none;
+    color: white;
+    background: #6b3878;
+    height: 50px;
+    width: 130px;
+    border-radius: 25px;
+}
+
+@media (min-width: 576px){
+	.modal-dialog {
+    	max-width: 700px;
+    }
 }
