@@ -1,2 +1,9 @@
-remove a big file wrongly committed in git:
+* remove a big file wrongly committed in git:
 -> git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch path_to_file" HEAD
+
+* refs/original/* is there as a backup, in case you mess up your filter-branch. Believe me, it's a really good idea.
+Once you've inspected the results, and you're very confident that you have what you want, you can remove the backed up ref:
+-> git update-ref -d refs/original/refs/heads/yourcommit
+
+* shows histories of your commit:
+-> gitk --all
