@@ -45,6 +45,11 @@
 		    </div>
 		  </div>
 		{% endfor %}
+		{% else %}
+			<div class="novideo">
+				<h1 align="center">No video here, please come back again</h1>
+				<img align="center" width="100%" src="{% static 'video/images/Comingsoon.svg' %}" alt="">
+			</div>
 		{% endif %}
 	</div>
 </div>
