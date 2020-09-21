@@ -7,6 +7,7 @@ class VideoModel(models.Model):
 	description = models.TextField(max_length=1000,null=True, default=None);
 	video = models.FileField(upload_to='video_files', null=True)
 	images = models.ImageField(upload_to='videos');
+	code = models.CharField(max_length=20, null=True, default=None)
 	create_at = models.DateTimeField(null=True, default=None);
 
 	def __str__(self):

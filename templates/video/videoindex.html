@@ -18,15 +18,13 @@
 			<div class="descrip">
 				<a href=""><h5>{{ item.title }}</h5></a>
 				<p>{{ item.description }}</p>
-				<button type="button" data-toggle="modal" data-target="#myModal" class="watchnow">Watch now</button>
+				<button type="button" data-toggle="modal" data-target="#{{ item.code }}" class="watchnow">Watch now</button>
 			</div>
 		</div>
 
 		<!-- Modal -->
-		  <div class="modal fade" id="myModal" role="dialog">
+		  <div class="modal fade" id="{{ item.code }}" role="dialog">
 		    <div class="modal-dialog">
-		    
-		      <!-- Modal content-->
 		      <div class="modal-content">
 		        <div class="modal-header">
 		          <h4 class="modal-title">Video</h4>
