@@ -1,0 +1,80 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+	<section class="section section1">
+		<div class=" container banner">
+			<div class="left-right-banner">
+				<div class="left-content-banner">
+					<h2>This is my site which will show you something greate</h2>
+					<p>This is a smaller line for comments, you might not care</p>
+					<div class="">
+						<button  class="see-more" type="button">See more </button>
+					</div>
+				</div>
+				<div class="right-content-banner">
+					<img width="100%" src="{% static 'core/images/bannerimg.svg' %}">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section section2">
+		<div class="container content1">
+			<div class="three">
+				<div class="three-title">
+					<h2>Our products</h2>
+				</div>
+				<div class="row three-col">
+					<div class="col-md-3">
+						<div class="cardd cardd1" data-aos="fade-up" data-aos-offset="200"data-aos-delay="400">
+							<img src="{% static 'core/images/three1.svg' %}">
+							<div class="cardd-content">
+								<h2>item1</h2>
+								<p>this is the description of this item</p>
+								<button class="readnow" type="button">read it now</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="cardd cardd2" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+							<img src="{% static 'core/images/three2.svg' %}">
+							<div class="cardd-content">
+								<h2>item2</h2>
+								<p>this is the description of this item</p>
+								<button class="readnow" type="button">read it now</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="cardd cardd3" data-aos="fade-up" data-aos-offset="200">
+							<img src="{% static 'core/images/three3.svg' %}">
+							<div class="cardd-content">
+								<h2>item3</h2>
+								<p>this is the description of this item</p>
+								<button class="readnow" type="button">read it now</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section section3">
+		<div class="container">
+			<div class="aboutus">
+				<div class="img-left">
+					<img src="{% static 'about/images/Capture.png' %}" alt="">
+					<span></span>
+				</div>
+				<div class="textright">
+					<h5 data-aos="fade-left" data-aos-offset="50">See more thing about me</h5>
+					<a href="{% url 'about:aboutme' %}"><button data-aos="fade-left" data-aos-offset="50" data-aos-delay="200" type="button">See more <img class="right-arrow" src="{% static 'core/images/right-arrow.svg' %}" alt=""></button></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="./index.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+    	AOS.init();
+    </script>
+{% endblock %}

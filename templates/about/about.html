@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block css_blocl %} 
+	<link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="row content1">
+			{% if me %}
+			{% for item in me %}
+			<div class="left-1 avatar col-md-4">
+				<div class="card-avt">
+					<span class="white-animate"></span>
+					<img class="avt-img" src="{% static 'about/images/avt.jpg' %}" alt="">
+					<div class="under-img">
+						<button type="button"><p>Contact for work</p></button>
+					</div>
+					<div class="name">
+						<p><span>{{ item.name }}</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="right-1 profile col-md-8">
+				<div class="card-right">
+					<h4>{{ item.english_name }}</h4>
+					<p>{{ item.description }}</p>
+					<div class="contactme">
+						<div class="face">
+							<a href="https://www.facebook.com/huynhngoc.danh.5/"><p><img src="{% static 'about/images/facebook.svg' %}" alt=""> Huỳnh Ngọc Danh</p></a>
+						</div>
+						<div class="face">
+							<a href="https://www.instagram.com/danh_huynhngoc/"><p><img src="{% static 'about/images/instagram.svg' %}" alt=""> danh_huynhngoc</p></a>
+						</div>
+				</div>
+			</div>
+			{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

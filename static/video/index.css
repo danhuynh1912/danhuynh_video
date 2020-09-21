@@ -1,0 +1,55 @@
+.title-video{
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container{
+	padding: 0rem 5rem 
+}
+
+.list-video{
+	padding: 0rem 3rem
+}
+
+.title-video h2, p{
+	text-align: center;
+	margin-bottom: 1rem
+}
+
+.titlevideo{
+	color: teal;
+}
+
+.card-video img{
+	width: 30%;
+}
+
+.card-video p{
+	text-align: left;
+	color: #707070
+}
+
+.card-video h5{
+	color: #f44f4f;
+}
+
+.card-video a:hover{
+	color: #f44f4f;
+}
+
+
+.card-video{
+	display: flex;
+	margin-bottom: 2rem
+}
+
+.descrip{
+	padding: 1rem 2rem;
+	background: #eaeaea;
+}
+
+.card-video:nth-child(even) img{
+	order: 2
+}

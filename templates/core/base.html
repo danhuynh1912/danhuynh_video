@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+	{% block css_blocl %} {% endblock %}
+</head>
+<body>
+	<div class="container">
+		<nav class="navv">
+		<div class="logo">
+			<p>danhuynh</p>
+		</div>
+		<div class="my-nav">
+			<a class="navb-link active" href="{% url 'core:home' %}">Home</a>
+			<a class="navb-link" href="{% url 'about:aboutme' %}">About me</a>
+			<a class="navb-link" href="#">Products</a>
+			<a class="navb-link" href="{% url 'video:video' %}">Video</a>
+			<a class="navb-link" href="#">Contact</a>
+		</div>
+	</nav>
+	</div>
+	{% block content %}
+	{% endblock %}
+	<script type="text/javascript" src="./index.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+    	AOS.init({
+    		duration: 1000
+    	});
+    </script>
+</body>
+</html>

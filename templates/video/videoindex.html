@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block css_blocl %} 
+<link rel="stylesheet" href="{% static 'video/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="video-all container">
+	<div class="title-video">
+		<h2 class="titlevideo">Video</h2>
+		<p>All my video about my friend or something greate</p>
+	</div>
+	<div class="list-video">
+		{% if item_video %}
+		{% for item in item_video %}
+		<div class="card-video" data-aos="fade-right">
+			<img src="{{ MEDIA_URL }}{{item.images}}">
+			<div class="descrip">
+				<a href=""><h5>{{ item.title }}</h5></a>
+				<p>{{ item.description }}</p>
+			</div>
+		</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
