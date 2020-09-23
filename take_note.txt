@@ -7,3 +7,6 @@ Once you've inspected the results, and you're very confident that you have what 
 
 * shows histories of your commit:
 -> gitk --all
+
+*remove file in commit before pushing:
+-> git rm --cached -r afolder/
