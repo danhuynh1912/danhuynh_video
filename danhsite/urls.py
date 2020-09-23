@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include("core.urls")),
     path('', include("about.urls")),
     path('', include("video.urls")),
+    path('products/', include("image_products.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
