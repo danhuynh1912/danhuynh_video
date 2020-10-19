@@ -1,8 +1,30 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block css_blocl %} {% endblock %}
+{% block css_blocl %} 
+<link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+{% endblock %}
 
 {% block content %}
-<h1>alo</h1>
+<div class="container">
+	<div class="title">
+		<h3>My photograghy projects</h3>
+	</div>
+	<div class="row products-list">
+		{% for img in imgs %}
+		<div class="col-md-3">
+			<div class="card-product">
+				<img class="imgicon" src="{% static 'products/images/imagesicon.svg' %}" alt="">
+				<p class="time">{{ img.create_at.date }}</p>
+				<img class="img-product" src="{{ MEDIA_URL }}{{ img.theme_image }}" alt="">
+				<div class="description">
+					<a class="title-product" href="{% url 'products:productsInfor' img.id %}"><span></span>
+						{{ img.title }}
+					</a>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
 {% endblock %}

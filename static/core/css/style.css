@@ -1,12 +1,9 @@
 body{
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Sarabun', sans-serif;
 }
 
-.section1{
-	background: url('../images/back.png');
-	/*background-attachment: fixed;*/
-	background-position: top;
-	background-repeat: no-repeat;
+button:focus{
+	outline: none;
 }
 
 .navv{
@@ -21,7 +18,7 @@ body{
 }
 
 .logo{
-	color: #f44f4f;
+	color: black;
 }
 
 .title{
@@ -36,11 +33,11 @@ body{
 .my-nav a{
 	margin: 0px 20px;
 	padding: 10px;
-	color: #7689a7
+	color: black
 }
 
 .my-nav a:hover{
-	background: #5d43c1;
+	background: #212121;
 	color: white;
 	border-radius: 5px;
 }
@@ -65,7 +62,7 @@ body{
 
 .left-content-banner h2{
 	font-size: 3rem;
-	color: #5d43c1;
+	color: white;
 	opacity: 0%;
 	position: relative;
 	top: 40px;
@@ -76,7 +73,7 @@ body{
 
 .left-content-banner p{
 	font-size: 1.7rem;
-	color: #696969;
+	color: #131313;
 	opacity: 0%;
 	position: relative;
 	top: 40px;
@@ -94,9 +91,9 @@ body{
 	width: 200px;
 	height: 50px;
 	outline: none;
-	border: 2px solid #f44f4e;
+	border: 2px solid white;
 	background: none;
-	color: #f44f4e;
+	color: white;
 	transition: all 0.5s;
 	opacity: 0%;
 	top: 40px;
@@ -107,9 +104,11 @@ body{
 }
 
 .see-more:hover{
-	background: #f44f4e;
+	background: black;
 	color: white;
+	border: none;
 	transition: all 0.5s;
+	box-shadow: -3px 2px 10px 0px #000
 }
 
 @keyframes fadeup {
@@ -133,31 +132,62 @@ body{
 }
 
 .cardd{
-	box-shadow: -5px 4px 16px -3px #bdbdbd;
+	box-shadow: -5px 4px 16px -3px black;
 	height: 440px;
-	border-radius: 10px;
-	padding: 50px 0px;
+	border-radius: 11px;
+	padding: 0px;
 	margin: 0px 10px;
 	width: 290px;
 	background: white;
+	position: relative;
+}
+
+.cardd:after{
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+    z-index: 0;
+    background: linear-gradient(to top, #000000d9, transparent);
+}
+
+.cardd:hover .cardd-content{
+	bottom: 55px;
+}
+
+.cardd img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
 }
 
 .cardd-content{
 	margin-top: 20px;
 	padding: 0px 20px;
+	position: absolute;
+	bottom: 40px;
+	z-index: 1;
+	color: white;
+	transition: all 0.5s;
 }
 
 .readnow{
-	height: 50px; 
-	width: 140px;
-	border: none;
-	background: #4c369d;
-	color: white;
-	border-radius: 25px;
+	height: 50px;
+    width: 140px;
+    border: none;
+    background: #ffffff;
+    color: black;
+    font-weight: 600;
+    border-radius: 25px;
 }
 
 .readnow:hover{
-	background: #6246ca;
+	background: #000000;
+	color: white;
 }
 
 .three-title{
@@ -176,17 +206,25 @@ body{
 
 .section2{
 	padding: 10px 0px 100px 0px;
-    background: whitesmoke;
+    background: #3c3c3c;
+}
+
+.section3{
+	background: #212121;
+    padding: 100px;
 }
 
 .aboutus{
 	border-radius: 10px;
-    margin: 5rem auto;
+    margin: auto;
     display: flex;
     align-items: center;
     padding: 3rem;
-    box-shadow: -5px 4px 16px -3px #bdbdbd;
+    box-shadow: -5px 4px 16px -3px black;
     width: 60%;
+    background: url('../../about/images/backavt.jpg') no-repeat;
+    background-size: 100%;
+    background-position-y: -130px;
 }
 
 .img-left img{
@@ -202,7 +240,7 @@ body{
     position: relative;
 }
 
-.img-left span{
+/*.img-left span{
 	position: absolute;
 	background: #fff;
 	width: 155px;
@@ -211,7 +249,7 @@ body{
     animation: smaller 1.3s;
     animation-fill-mode: forwards;
     animation-delay: 0.5s
-}
+}*/
 
 @keyframes smaller {
 	from{
@@ -224,6 +262,10 @@ body{
 
 .textright{
 	width: 60%;
+}
+
+.textright h5{
+	color: white;
 }
 
 .textright button{
