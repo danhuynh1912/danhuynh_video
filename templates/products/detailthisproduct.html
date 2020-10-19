@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block css_blocl %} 
+<link rel="stylesheet" href="{% static 'products/css/detailthisproduct.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row content">
+		<div class="col-md-8">
+			<div class="content-left row">
+				<div class="col-md-5">
+					<img class="product-img" src="{{ MEDIA_URL }}{{ infor.theme_image }}" alt="">
+				</div>
+				<div class="col-md-7">
+					<div class="description">
+						<h1>{{ infor.title }}</h1>
+						<span>{{ infor.create_at.date }}</span>
+						<p>{{ infor.description }}</p>
+						<a href=""><button type="button">Go now <img class="right-arrow" src="{% static 'core/images/right-arrow.svg' %}" alt=""></button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="others">
+				{% for product in products %}
+				<a href="{% url 'products:productsInfor' product.id %}">
+				<div class="another">
+					<img src="{{ MEDIA_URL }}{{ product.theme_image }}" alt="">
+					<div class="infor-another">
+						<h4>{{ product.title }}</h4>
+					</div>
+				</div>
+				<a href="{% url 'products:productsInfor' product.id %}">
+				<hr>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

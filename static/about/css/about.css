@@ -81,7 +81,7 @@
     color: white;
     background: #6e71b7;
     height: 50px;
-    width: 130px;
+    width: 150px;
     border-radius: 25px;
     animation: existconcon 0.8s;
     animation-fill-mode: forwards;
@@ -138,7 +138,7 @@
 		opacity: 0;
 	}
 	to{
-		width: 130px;
+		width: 150px;
 		opacity: 1;
 	}
 }
