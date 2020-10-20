@@ -37,7 +37,7 @@ button:focus{
 }
 
 .my-nav a:hover{
-	background: #212121;
+	background: linear-gradient(45deg, #0ba499, #15dcc6);
 	color: white;
 	border-radius: 5px;
 }
@@ -104,11 +104,11 @@ button:focus{
 }
 
 .see-more:hover{
-	background: black;
+	background: linear-gradient(45deg, #0ba499, #15dcc6);
 	color: white;
 	border: none;
 	transition: all 0.5s;
-	box-shadow: -3px 2px 10px 0px #000
+	box-shadow: 0px 4px 30px -2px rgb(0 0 0 / 52%);
 }
 
 @keyframes fadeup {
@@ -133,13 +133,14 @@ button:focus{
 
 .cardd{
 	box-shadow: -5px 4px 16px -3px black;
-	height: 440px;
+	height: 530px;
 	border-radius: 11px;
 	padding: 0px;
 	margin: 0px 10px;
-	width: 290px;
+	width: 330px;
 	background: white;
 	position: relative;
+	overflow: hidden;
 }
 
 .cardd:after{
@@ -155,7 +156,7 @@ button:focus{
 }
 
 .cardd:hover .cardd-content{
-	bottom: 55px;
+	bottom: 0px;
 }
 
 .cardd img{
@@ -167,26 +168,31 @@ button:focus{
 
 .cardd-content{
 	margin-top: 20px;
-	padding: 0px 20px;
+	padding: 0px 20px 60px 20px;
 	position: absolute;
-	bottom: 40px;
+	bottom: -110px;
 	z-index: 1;
 	color: white;
 	transition: all 0.5s;
+	width: 100%;
+}
+
+.cardd-content p{
+	margin-bottom: 40px;
 }
 
 .readnow{
 	height: 50px;
-    width: 140px;
+    width: 100%;
     border: none;
     background: #ffffff;
     color: black;
     font-weight: 600;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
 }
 
 .readnow:hover{
-	background: #000000;
+	background: linear-gradient(45deg, #0ba499, #15dcc6);
 	color: white;
 }
 
@@ -197,7 +203,7 @@ button:focus{
 
 .three-title h2{
 	font-size: 2.5rem;
-	color: #6b6b6b
+	color: white
 }
 
 .content2{
@@ -206,7 +212,7 @@ button:focus{
 
 .section2{
 	padding: 10px 0px 100px 0px;
-    background: #3c3c3c;
+    background: linear-gradient(45deg, #35383e, #535f5d);
 }
 
 .section3{
